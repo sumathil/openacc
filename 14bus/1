@@ -1,0 +1,42 @@
+#include "LF_function.h"
+
+
+void bustype(int *PV, int *PQ, int *type_bus)
+{
+	int j = 0;
+	int k = 0;
+	for (int i = 0; i < num_buses; i++)
+	{
+		if (type_bus[i] == 2 || type_bus[i] == 1)
+		{
+			PV[j] = i;
+			j++;
+		}
+		if (type_bus[i] == 3)
+		{
+			PQ[k] = i;
+			k++;
+		}
+	}
+}
+
+
+void initializevector( double *vect, int n)
+{
+	for (int i=0;i<n;i++)
+	{
+		vect[i]=0.0f;
+	}
+
+}
+
+void printvector(double *vect,int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		cout<< vect[i]<<endl;
+	}
+
+
+}
+
